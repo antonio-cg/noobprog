@@ -1,0 +1,201 @@
+;Codigo ensamblador generado por noobprog
+;Autogenerador el dia: 2015/12/17 08:27:15
+DGROUP GROUP _DATA,_BSS
+_DATA SEGMENT WORD PUBLIC 'DATA'
+id1 dw 3
+id11 dw 0
+id10 dw 0
+id13 db "valor holis despues DE HACER LA OPERACION",11
+id12 dw 0
+id15 db "valor holis2 ANTES DE HACER LA OPERACION",11
+id2 dw 0
+id19 dw 0
+id14 dw 100
+id20 dw 100
+id22 dw 2
+id21 dw 20
+id24 dw 0
+id23 dw 0
+id25 db "valor otra DESPUES DE HACER LA OPERACION",11
+id17 dw 100
+id16 db "valor holis2 DESPUES DE HACER LA OPERACION",11
+id18 dw 0
+id0 db "Hola Mundo desde NoobProg",11
+id4 dw 4
+id3 db "valor holis ANTES DE HACER LA OPERACION",11
+id6 dw 10
+id5 dw 5
+id8 dw 0
+id7 dw 3
+id9 dw 0
+_DATA ENDS
+_BSS SEGMENT WORD PUBLIC 'BSS'
+_BSS ENDS
+_TEXT SEGMENT BYTE PUBLIC 'CODE'
+ASSUME CS:_TEXT,DS:DGROUP,SS:DGROUP
+PUBLIC _main
+EXTRN _resta:NEAR
+EXTRN _suma:NEAR
+EXTRN _divi:NEAR
+EXTRN _multi:NEAR
+EXTRN _impString:NEAR
+EXTRN _impNumero:NEAR
+EXTRN _leer:NEAR
+EXTRN _iguala:NEAR
+_main PROC NEAR
+;---------------INICIA CODIGO GENERADO POR JAVA------------------
+LEA AX,id0
+PUSH AX
+CALL _impString
+MOV AX,2
+ADD SP,AX
+LEA AX,id2
+PUSH AX
+CALL _leer
+MOV AX,2
+ADD SP,AX
+LEA AX,id3
+PUSH AX
+CALL _impString
+MOV AX,2
+ADD SP,AX
+LEA AX,id1
+PUSH AX
+CALL _impNumero
+MOV AX,2
+ADD SP,AX
+LEA AX,id8
+PUSH AX
+LEA AX,id4
+PUSH AX
+LEA AX,id5
+PUSH AX
+CALL _multi
+MOV AX,6
+ADD SP,AX
+LEA AX,id9
+PUSH AX
+LEA AX,id8
+PUSH AX
+LEA AX,id6
+PUSH AX
+CALL _multi
+MOV AX,6
+ADD SP,AX
+LEA AX,id10
+PUSH AX
+LEA AX,id7
+PUSH AX
+LEA AX,id2
+PUSH AX
+CALL _suma
+MOV AX,6
+ADD SP,AX
+LEA AX,id11
+PUSH AX
+LEA AX,id10
+PUSH AX
+CALL _iguala
+MOV AX,4
+ADD SP,AX
+LEA AX,id12
+PUSH AX
+LEA AX,id9
+PUSH AX
+LEA AX,id11
+PUSH AX
+CALL _multi
+MOV AX,6
+ADD SP,AX
+LEA AX,id1
+PUSH AX
+LEA AX,id12
+PUSH AX
+CALL _iguala
+MOV AX,4
+ADD SP,AX
+LEA AX,id13
+PUSH AX
+CALL _impString
+MOV AX,2
+ADD SP,AX
+LEA AX,id1
+PUSH AX
+CALL _impNumero
+MOV AX,2
+ADD SP,AX
+LEA AX,id15
+PUSH AX
+CALL _impString
+MOV AX,2
+ADD SP,AX
+LEA AX,id14
+PUSH AX
+CALL _impNumero
+MOV AX,2
+ADD SP,AX
+LEA AX,id16
+PUSH AX
+CALL _impString
+MOV AX,2
+ADD SP,AX
+LEA AX,id18
+PUSH AX
+LEA AX,id17
+PUSH AX
+LEA AX,id1
+PUSH AX
+CALL _multi
+MOV AX,6
+ADD SP,AX
+LEA AX,id14
+PUSH AX
+LEA AX,id18
+PUSH AX
+CALL _iguala
+MOV AX,4
+ADD SP,AX
+LEA AX,id14
+PUSH AX
+CALL _impNumero
+MOV AX,2
+ADD SP,AX
+LEA AX,id23
+PUSH AX
+LEA AX,id21
+PUSH AX
+LEA AX,id22
+PUSH AX
+CALL _multi
+MOV AX,6
+ADD SP,AX
+LEA AX,id24
+PUSH AX
+LEA AX,id23
+PUSH AX
+LEA AX,id20
+PUSH AX
+CALL _suma
+MOV AX,6
+ADD SP,AX
+LEA AX,id19
+PUSH AX
+LEA AX,id24
+PUSH AX
+CALL _iguala
+MOV AX,4
+ADD SP,AX
+LEA AX,id25
+PUSH AX
+CALL _impString
+MOV AX,2
+ADD SP,AX
+LEA AX,id19
+PUSH AX
+CALL _impNumero
+MOV AX,2
+ADD SP,AX
+RET
+_main ENDP
+_TEXT ENDS
+END
